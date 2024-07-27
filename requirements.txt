@@ -5,4 +5,4 @@ pytest
 requests
 google-cloud-storage
 google-cloud-bigquery
-numpy==1.26.4
+Werkzeug==2.2.2
