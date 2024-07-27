@@ -8,7 +8,8 @@ from sklearn.preprocessing import PolynomialFeatures, StandardScaler
 from google.cloud import storage
 from datetime import datetime
 from google.cloud import bigquery
-import json 
+import json
+
 
 storage_client = storage.Client()
 bucket = storage_client.bucket("saq-ml-ops")
