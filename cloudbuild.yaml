@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/udemy-mlops-430513/advertising_roi_model_model', '.']
+  args: ['build', '-t', 'gcr.io/udemy-mlops-430513/advertising_roi_model', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/udemy-mlops-430513/advertising_roi_model']
