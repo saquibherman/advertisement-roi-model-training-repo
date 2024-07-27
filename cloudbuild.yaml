@@ -1,11 +1,11 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/udemy-mlops-430513/advertising_roi_model', '.']
+  args: ['build', '-t', 'gcr.io/udemy-mlops-430513/advertising_roi_model_model', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/udemy-mlops-430513/advertising_roi']
+  args: ['push', 'gcr.io/udemy-mlops-430513/advertising_roi_model']
 
-- name: 'gcr.io/udemy-mlops-430513/advertising_roi'
+- name: 'gcr.io/udemy-mlops-430513/advertising_roi_model'
   entrypoint: 'bash'
   args:
    - '-c'
@@ -19,7 +19,7 @@ steps:
   args: ['cp', 'advertisement-roi-model-training-repo/advertising_model_training.py', 'gs://us-central1-mlops-airflow-9699781c-bucket/dags']
 
 images:
-- 'gcr.io/udemy-mlops-430513/advertising_roi'
+- 'gcr.io/udemy-mlops-430513/advertising_roi_model'
 
 options:
   logging: CLOUD_LOGGING_ONLY
